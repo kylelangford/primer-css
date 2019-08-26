@@ -5,17 +5,37 @@ Primer is all Sass.
 ## Features
 
 * Mobile First
-* Soft Grid
-* BEM Selector Naming
-* SMCSS Declaration Sorting
+* BEM: Selector Naming
+* SMCSS: Declaration Sorting
 * Human-readable
-* Simple
+* Gridless
 
 ## Mixins
 
-### BEM
-```css
-Use
+### BEM()
+
+```scss
+
+.button {
+	@include elem('primary') {
+		background-color: blue;
+
+	}
+	@include mod('is-disabled') {
+		opacity: .5;
+	}	
+}
+
+.button {
+	.button__primary {
+			background-color: blue;
+	}
+
+	.button--is-disabled {
+			opacity: .5;
+	}
+}
+
 ```
 
 #### Block Element Modifier
@@ -57,6 +77,12 @@ Softgrid, base 8px
 
 [https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632](https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632)
 
+```css
+g(8)
+
+```
+
+
 #### Pixels for layout
 The prefered units for element sizing is percents and pixels. 
 
@@ -80,7 +106,7 @@ A container is an element with a max-width and equal left / right margins. This 
 ### Media
 Mobile First Media Queries
 
-```css
+```scss
 @include media($md-breakpoint) {
   width: 100%;
   height: 100vh;
@@ -131,10 +157,10 @@ a {
 }
 
 a {
-  -webkit-transition: color 0.15s linear;
-  -ms-transition: color 0.15s linear;
-  /* Output standard non-prefixed declaration */
-  transition: color 0.15s linear;
+	-webkit-transition: color 0.15s linear;
+	-ms-transition: color 0.15s linear;
+	/* Output standard non-prefixed declaration */
+	transition: color 0.15s linear;
 }
 
 ```
