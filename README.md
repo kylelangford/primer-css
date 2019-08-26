@@ -1,19 +1,22 @@
 # Primer
 
-Primer is pure Sass.
-Human-readable: We aim for clarity over brevity.
-Simple
+Primer is all Sass.
 
 ## Features
 
-* Base 8 Grid(Soft)
-* BEM Selector Naming
-* SMCSS declaration sorting (post processor)
 * Mobile First
+* Soft Grid
+* BEM Selector Naming
+* SMCSS Declaration Sorting
+* Human-readable
+* Simple
 
-## Mixin Library
+## Mixins
 
 ### BEM
+```css
+Use
+```
 
 #### Block Element Modifier
 
@@ -26,7 +29,6 @@ with .block--color-red. Spaces in complicated modifiers are replaced by dash.
 
 ```css
 .form { }
-.form--theme-xmas { }
 .form--simple { }
 .form__input { }
 .form__submit { }
@@ -45,7 +47,9 @@ Declaration Sorting
 5. Theme
 
 #### Gulp
+
 [https://www.npmjs.com/package/css-declaration-sorter](https://www.npmjs.com/package/css-declaration-sorter)
+
 If you use gulp I would recomend using 'CSS Declaration Sorter' that will organize your CSS for production.
 
 ### Grid
@@ -54,8 +58,13 @@ Softgrid, base 8px
 [https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632](https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632)
 
 #### Pixels for layout
-#### Flex
+The prefered units for element sizing is percents and pixels. 
+
+#### Flexbox
+Use flexbox to organize inline media.
+
 #### CSS Grid
+Use CSS Grid to create layouts.
 
 ### Containerize
 A container is an element with a max-width and equal left / right margins. This can be used to set the primary column and page gutters. Containers can be used to organize rows.
@@ -72,13 +81,17 @@ A container is an element with a max-width and equal left / right margins. This 
 Mobile First Media Queries
 
 ```css
-  @include media($md-breakpoint) {
-    width: 100%;
-    height: 100vh;
-    max-height: 850px;
-  }    
+@include media($md-breakpoint) {
+  width: 100%;
+  height: 100vh;
+  max-height: 850px;
+}    
 
-  CSS OUTPUT
+@media only screen and (min-width: 1100px) {
+  width: 100%;
+  height: 100vh;
+  max-height: 850px;
+}
 
 ```
 
@@ -86,35 +99,69 @@ Mobile First Media Queries
 Setting proper accessibility and states
 
 ```scss
-  :hover
-  :focus
-  :active
-  :disabled
-  :disabled:active
-  .is-disabled,
-  .is-disabled:active
+@include buttonize():
+
 ```
+
+- `:hover`
+- `:focus`
+- `:active`
+- `:disabled`
+- `:disabled:active`
+- `.is-disabled`
+- `.is-disabled:active`
+
 
 ### Iconize
-Helper
-
 
 ```scss
-Options Before/After
+@include iconize($icon-family, $icon-uni, $side: 'before'):
+
 ```
+- `icon-family` Font-Family
+- `icon-uni` Unicode Value
+- `side` Before or after
 
 ### Prefix
 Mixin to Add Vendor Prefixes 
 
+```scss
+a {
+	@include prefix(transition, color 0.15s linear, webkit ms);
+}
+
+a {
+  -webkit-transition: color 0.15s linear;
+  -ms-transition: color 0.15s linear;
+  /* Output standard non-prefixed declaration */
+  transition: color 0.15s linear;
+}
+
+```
+
 ### Prefix-keyframes
 Special case to add Vendor Prefixes for keyframes
 
+```scss
+Example
+```
+
 ### EM
-Utility Mixin to Convert pixels to EMs, use this for media queries and thats about
+Function to Convert pixels to EMs, use this for media queries and thats about
 
 #### Suggested Use: Media Queries
 
+```scss
+em($pixels, $context: $base-font-size);
+```
+
+
 ### REM
-Utility Mixin to Convert pixels to REMs, use this for font sizing
+Function to convert pixels to REMs, use this for font sizing
 
 #### Suggested Use: Font-Sizing
+
+```scss
+rem($pixels, $root_context: $base-font-size);
+
+```
