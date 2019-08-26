@@ -28,11 +28,11 @@ Primer is all Sass.
 
 .button {
 	.button__primary {
-			background-color: blue;
+		background-color: blue;
 	}
 
 	.button--is-disabled {
-			opacity: .5;
+		opacity: .5;
 	}
 }
 
@@ -48,11 +48,14 @@ two dashes: .block--mod or .block__elem--mod and .block--color-black
 with .block--color-red. Spaces in complicated modifiers are replaced by dash.
 
 ```css
-.form { }
-.form--simple { }
-.form__input { }
-.form__submit { }
-.form__submit--disabled { }
+/* block */
+.form {}
+
+/* element */
+.form__submit {}
+
+/* modified */
+.form__submit--disabled {}
 ```
 
 #### Scalable and Modular Architecture for CSS
@@ -137,6 +140,17 @@ Setting proper accessibility and states
 - `.is-disabled`
 - `.is-disabled:active`
 
+#### Theming
+```scss
+$button-padding-default: 9px 24px 10px 24px !default;
+$button-padding-small: 4px 24px !default;
+$button-background-color: linear-gradient(to bottom, $white, $subtle-gray)  !default;
+$button-background-color--hover: linear-gradient(to bottom, $subtle-gray, $white) !default;
+$button-background-color--focus: linear-gradient(to bottom, $subtle-gray, $white) !default;
+// -webkit-linear-gradient(top, $subtle-gray, $white)
+$button-background-color--active: $light-gray !default;
+$button-border-color: $medium-gray !default;
+```
 
 ### Iconize
 
@@ -179,8 +193,8 @@ Function to Convert pixels to EMs, use this for media queries and thats about
 
 ```scss
 em($pixels, $context: $base-font-size);
-```
 
+```
 
 ### REM
 Function to convert pixels to REMs, use this for font sizing
