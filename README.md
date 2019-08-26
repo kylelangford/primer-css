@@ -17,23 +17,23 @@ Primer is all Sass.
 ```scss
 
 .button {
-	@include elem('primary') {
-		background-color: blue;
+  @include elem('primary') {
+    background-color: blue;
 
-	}
-	@include mod('is-disabled') {
-		opacity: .5;
-	}	
+  }
+  @include mod('is-disabled') {
+    opacity: .5;
+  } 
 }
 
 .button {
-	.button__primary {
-		background-color: blue;
-	}
+  .button__primary {
+    background-color: blue;
+  }
 
-	.button--is-disabled {
-		opacity: .5;
-	}
+  .button--is-disabled {
+    opacity: .5;
+  }
 }
 
 ```
@@ -167,14 +167,14 @@ Mixin to Add Vendor Prefixes
 
 ```scss
 a {
-	@include prefix(transition, color 0.15s linear, webkit ms);
+  @include prefix(transition, color 0.15s linear, webkit ms);
 }
 
 a {
-	-webkit-transition: color 0.15s linear;
-	-ms-transition: color 0.15s linear;
-	/* Output standard non-prefixed declaration */
-	transition: color 0.15s linear;
+  -webkit-transition: color 0.15s linear;
+  -ms-transition: color 0.15s linear;
+  /* Output standard non-prefixed declaration */
+  transition: color 0.15s linear;
 }
 
 ```
