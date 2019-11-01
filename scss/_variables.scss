@@ -1,0 +1,158 @@
+/* Layout
+ ----------------------------------------------------------------------------------
+ ---------------------------------------------------------------------------------- */
+$max-width: em(1088) !default;
+
+
+/* BREAKPOINTS SETTINGS
+ ----------------------------------------------------------------------------------
+ - comments
+ ---------------------------------------------------------------------------------- */
+$sm-breakpoint: 800px;
+$md-breakpoint: 1100px;
+$lg-breakpoint: 1300px;
+
+$phone:        400px  !default;
+$phone-wide:   480px  !default;
+$phablet:      560px  !default;
+$tablet-small: 640px  !default;
+$tablet:       768px  !default;
+$tablet-wide:  1024px !default;
+$desktop:      1248px !default;
+$desktop-wide: 1440px !default;
+
+
+/* Vendor Prefixes
+ ----------------------------------------------------------------------------------
+ ---------------------------------------------------------------------------------- */
+$prefixes: 'webkit', 'moz', 'ms', 'o' !default;
+
+
+/* COLOR SETTINGS
+ ----------------------------------------------------------------------------------
+ ---------------------------------------------------------------------------------- */
+$primary-color: #6da6a0;
+$primary-color-medium: darken($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 25%) !default;
+$secondary-color: #ffcc2f;
+
+// Secondary Colors
+$light-yellow: #fffbed !default;
+$red: #ff5050 !default;
+$charcoal: #333333 !default;
+$charcoal: #323e43;
+
+// Theme Colors
+$background-color: $subtle-gray !default;
+$text-color: $charcoal !default;
+$text-description-color: #555555 !default;
+
+// 'Link' Color
+$action-color: #5689b2 !default;
+$action-color--hover: $primary-color-medium !default;
+$action-color--focus: $primary-color-medium !default;
+$action-color--active: $primary-color-dark !default;
+
+/* Font Colors */
+$base-font-color: #323e43;
+$base-link-color: $action-color;
+$base-accent-color: $action-color;
+
+/* Status Colors */
+$messages--status: $primary-color;
+$messages--warning: $light-yellow;
+$messages--error: $red;
+
+/* VERTICAL SPACING
+ ----------------------------------------------------------------------------------
+ - comments
+ ---------------------------------------------------------------------------------- */
+$base-line-height: 1.6;
+$header-line-height: 1.25;
+$base-spacing: $base-line-height * 1em;
+$base-padding: 1.5rem;
+$wrap-padding: 1.5rem;
+
+/* SPACING
+ ----------------------------------------------------------------------------------
+ - comments
+ ---------------------------------------------------------------------------------- */
+$base-gutter: 2.5rem !default;
+$base-spacing: 1.5rem !default;
+$half-spacing: $base-spacing / 2 !default;
+$base-line-height: 1.5em !default;
+
+/* FONT SETTINGS
+ ----------------------------------------------------------------------------------
+	- default body text  'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
+	- subtitle h2 text   'Rubik', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
+	- form input text    'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
+	- default p text     'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
+	- pre and code       Consolas, Lucida Console, Monaco, monospace
+ ---------------------------------------------------------------------------------- */
+$sans-serif: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$sans-serif-2: 'Rubik', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$serif: 'Palatino Linotype', 'Book Book Antiqua', 'Palatino', serif;
+$base-font-family: $sans-serif;
+$header-font-family: $sans-serif-2;
+
+// Font Sizes
+$base-font-size: 16px;
+$h1-font-size: $base-font-size * 2.25;
+$h2-font-size: $base-font-size * 2;
+$h3-font-size: $base-font-size * 1.75;
+$h4-font-size: $base-font-size * 1.5;
+$h5-font-size: $base-font-size * 1.25;
+$h6-font-size: $base-font-size;
+
+// H1
+$h1-font-family: $sans-serif !default;
+$h1-font-weight: 600 !default;
+$h1-font-color: $text-color !default;
+$h1-font-line-height: initial !default;
+$h1-font-margin-bottom: 0.6em !default;
+
+// H2
+$h2-font-family: $sans-serif !default;
+$h2-font-weight: 600 !default;
+$h2-font-color: $text-color !default;
+$h2-font-line-height: 1.4em !default;
+$h2-font-margin-bottom: 1.2em !default;
+
+// H3
+$h3-font-family: $sans-serif !default;
+$h3-font-weight: 600 !default;
+$h3-font-color: $text-color !default;
+$h3-font-line-height: 1.4em !default;
+$h3-font-margin-bottom: 0.5em !default;
+
+/* DIVIDERS AND LINES
+ ----------------------------------------------------------------------------------
+ - comments
+ ---------------------------------------------------------------------------------- */
+$base-border-color: $medium-gray;
+$base-border: 1px solid $base-border-color;
+$form-border: $base-border;
+$line-color: $medium-gray !default;
+$base-border: 1px solid $line-color !default;
+$base-corner-radius: 4px !default;
+$base-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1) !default;
+
+$sans-serif: 'Montserrat', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$sans-serif-2: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$serif: 'Palatino Linotype', 'Book Book Antiqua', 'Palatino', serif;
+$primary-color: #eb2088;
+$secondary-color: #ffcc2f;
+$off-white-color: #f4f4f4;
+$grey-color: #cdcdcd;
+$heading-font-color: #999;
+$paragraph-font-color: #212121;
+$panel-odd-color: $off-white-color;
+$panel-even-color: white;
+$button-edge: shade($primary-color, 50%);
+$wrap-padding: 6em;
+$small: 640px;
+$medium: 769px;
+$large: 1024px;
+$nav-bg-color: $primary-color;
+$border-radius: 2px;

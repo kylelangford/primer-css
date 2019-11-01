@@ -1,0 +1,18 @@
+# ignore config files
+*.json
+*.yml
+*.yaml
+
+# ignore files with markdown
+src/templates/layouts/**/*.html
+
+# ignore processed CSS
+css
+
+# Ignore Node Dependencies
+node_modules
+
+# Ignore Vendor JS
+vendor
+
+
