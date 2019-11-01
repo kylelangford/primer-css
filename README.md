@@ -7,26 +7,30 @@ Primer is simple mixin library for builing out larger more complex design system
 - Mobile First
 - BEM: Selector Naming
 - SMCSS: Declaration Sorting
+- Soft Grid
 - Human-readable
-- Gridless
 
 ## Mixins
 
 - bem
 - buttonzine
-- clearfix (keep?)
 - containerize
 - em
 - grid
 - iconize
 - media-queries
-- panelize (keep?)
 - prefix-keyframes
 - prefix
 - rem
-- zebra (keep?)
 
-### BEM()
+### Block Element Modifier
+
+[http://getbem.com/naming/](http://getbem.com/naming/)
+
+Modifier names may consist of Latin letters, digits, dashes and
+underscores. CSS class is formed as block’s or element’s name plus
+two dashes: .block--mod or .block\_\_elem--mod and .block--color-black
+with .block--color-red. Spaces in complicated modifiers are replaced by dash.
 
 ```scss
 .button {
@@ -46,29 +50,6 @@ Primer is simple mixin library for builing out larger more complex design system
   .button--is-disabled {
     opacity: 0.5;
   }
-}
-```
-
-#### Block Element Modifier
-
-[http://getbem.com/naming/](http://getbem.com/naming/)
-
-Modifier names may consist of Latin letters, digits, dashes and
-underscores. CSS class is formed as block’s or element’s name plus
-two dashes: .block--mod or .block\_\_elem--mod and .block--color-black
-with .block--color-red. Spaces in complicated modifiers are replaced by dash.
-
-```css
-/* block */
-.form {
-}
-
-/* element */
-.form__submit {
-}
-
-/* modified */
-.form__submit--disabled {
 }
 ```
 
