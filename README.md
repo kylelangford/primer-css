@@ -177,7 +177,7 @@ Example
 
 ### Grid
 
-Softgrid, base 8px
+Unit multiplier. Base on an 8px grid system. This means the smallest increment between items is 8px (or 4px) and all spaces are divisible by 8px(or 4). This insures spacing is optimized to pixel based displays and all spacing is proportional to each other. Spacing is relative to the closet adjacent element.
 
 [https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632](https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632)
 
@@ -188,15 +188,9 @@ g(8)
 
 #### Pixels for layout
 
-The prefered units for element sizing is percents and pixels.
+The prefered units for element sizing, vertical and horizontal spacing is percents and pixels.
 
-#### Flexbox
-
-Use flexbox to organize inline media.
-
-#### CSS Grid
-
-Use CSS Grid to create layouts.
+#### Suggested Use: Font-Sizing
 
 ### EM
 
@@ -219,3 +213,11 @@ Function to convert pixels to REMs, use this for font sizing
 rem($pixels, $root_context: $base-font-size);
 
 ```
+
+### Flexbox
+
+Use flexbox to organize inline media.
+
+### CSS Grid
+
+Use CSS Grid to create layouts.
