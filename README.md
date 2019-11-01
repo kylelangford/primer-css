@@ -2,7 +2,7 @@
 
 Primer is simple mixin library for builing out larger more complex design systems.
 
-## Features
+## Methodology
 
 - Mobile First
 - BEM: Selector Naming
@@ -64,15 +64,22 @@ Declaration Sorting
 4. State
 5. Theme
 
-#### Gulp
-
-[https://www.npmjs.com/package/css-declaration-sorter](https://www.npmjs.com/package/css-declaration-sorter)
+#### \*Gulp Tip
 
 If you use gulp I would recomend using 'CSS Declaration Sorter' that will organize your CSS for production.
+
+[https://www.npmjs.com/package/css-declaration-sorter](https://www.npmjs.com/package/css-declaration-sorter)
 
 ### Containerize
 
 A container is an element with a max-width and equal left / right margins. This can be used to set the primary column and page gutters. Containers can be used to organize rows.
+
+```scss
+.wrap {
+  @include containerize;
+  padding: $wrap-padding 0;
+}
+```
 
 ```html
 <div class="container">
@@ -83,7 +90,7 @@ A container is an element with a max-width and equal left / right margins. This 
 
 ### Media
 
-Mobile First Media Queries
+Mobile first media queries
 
 ```scss
 @include media($md-breakpoint) {
@@ -101,10 +108,10 @@ Mobile First Media Queries
 
 ### Buttonize
 
-Setting proper accessibility and states
+Button reset, sets desired accessibility options and states.
 
 ```scss
-@include buttonize(): ;
+@include buttonize();
 ```
 
 - `:hover`
@@ -115,35 +122,23 @@ Setting proper accessibility and states
 - `.is-disabled`
 - `.is-disabled:active`
 
-#### Theming
-
-```scss
-$button-padding-default: 9px 24px 10px 24px !default;
-$button-padding-small: 4px 24px !default;
-$button-background-color: linear-gradient(
-  to bottom,
-  $white,
-  $subtle-gray
-) !default;
-$button-background-color--hover: linear-gradient(
-  to bottom,
-  $subtle-gray,
-  $white
-) !default;
-$button-background-color--focus: linear-gradient(
-  to bottom,
-  $subtle-gray,
-  $white
-) !default;
-// -webkit-linear-gradient(top, $subtle-gray, $white)
-$button-background-color--active: $light-gray !default;
-$button-border-color: $medium-gray !default;
-```
-
 ### Iconize
+
+Writes all the annoying icon loading css.
 
 ```scss
 @include iconize($icon-family, $icon-uni, $side: 'before'): ;
+
+speak: none;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+line-height: normal;
+
+/* Better Font Rendering =========== */
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
 ```
 
 - `icon-family` Font-Family
@@ -169,10 +164,17 @@ a {
 
 ### Prefix-keyframes
 
-Special case to add Vendor Prefixes for keyframes
+Special case to add Vendor Prefixes for keyframes.
 
 ```scss
-Example
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
 ```
 
 ### Grid
@@ -194,7 +196,7 @@ The prefered units for element sizing, vertical and horizontal spacing is percen
 
 ### EM
 
-Function to Convert pixels to EMs, use this for media queries and thats about
+Function to Convert pixels to EMs, use this for media queries.
 
 #### Suggested Use: Media Queries
 
@@ -205,7 +207,7 @@ em($pixels, $context: $base-font-size);
 
 ### REM
 
-Function to convert pixels to REMs, use this for font sizing
+Function to convert pixels to REMs, use this for font sizing.
 
 #### Suggested Use: Font-Sizing
 
