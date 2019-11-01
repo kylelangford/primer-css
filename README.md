@@ -70,29 +70,6 @@ Declaration Sorting
 
 If you use gulp I would recomend using 'CSS Declaration Sorter' that will organize your CSS for production.
 
-### Grid
-
-Softgrid, base 8px
-
-[https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632](https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632)
-
-```css
-g(8)
-
-```
-
-#### Pixels for layout
-
-The prefered units for element sizing is percents and pixels.
-
-#### Flexbox
-
-Use flexbox to organize inline media.
-
-#### CSS Grid
-
-Use CSS Grid to create layouts.
-
 ### Containerize
 
 A container is an element with a max-width and equal left / right margins. This can be used to set the primary column and page gutters. Containers can be used to organize rows.
@@ -197,6 +174,29 @@ Special case to add Vendor Prefixes for keyframes
 ```scss
 Example
 ```
+
+### Grid
+
+Softgrid, base 8px
+
+[https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632](https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632)
+
+```css
+g(8)
+
+```
+
+#### Pixels for layout
+
+The prefered units for element sizing is percents and pixels.
+
+#### Flexbox
+
+Use flexbox to organize inline media.
+
+#### CSS Grid
+
+Use CSS Grid to create layouts.
 
 ### EM
 
