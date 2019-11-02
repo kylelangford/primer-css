@@ -81,9 +81,9 @@ Standardizing code formating is important when working with other developers, pr
 A container is an element with a max-width and equal left / right margins. This can be used to set the primary column and page gutters. Containers can be used to organize rows.
 
 ```scss
-.wrap {
+.container {
   @include containerize;
-  padding: $wrap-padding 0;
+  padding: $gutter 0;
 }
 ```
 
