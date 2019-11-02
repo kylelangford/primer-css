@@ -23,8 +23,9 @@ Primer is simple mixin library for builing out larger more complex design system
 - prefix
 - rem
 
-### Block Element Modifier
+### Syntax Naming: BEM
 
+Block Element Modifier
 [http://getbem.com/naming/](http://getbem.com/naming/)
 
 Modifier names may consist of Latin letters, digits, dashes and
@@ -53,9 +54,9 @@ with .block--color-red. Spaces in complicated modifiers are replaced by dash.
 }
 ```
 
-#### Scalable and Modular Architecture for CSS
+#### Declaration Sorting: SMACSS
 
-Declaration Sorting
+Scalable and Modular Architecture for CSS
 [http://smacss.com/book/categorizing](http://smacss.com/book/categorizing)
 
 1. Base
@@ -66,9 +67,14 @@ Declaration Sorting
 
 #### \*Gulp Tip
 
-If you use gulp I would recomend using 'CSS Declaration Sorter' that will organize your CSS for production.
+If you use gulp I would recomend using 'CSS Declaration Sorter' that will organize your CSS for production. You can choose the smacss settings to enforce that standard. You will get a performance benifit of smaller file size by doing this.
 
 [https://www.npmjs.com/package/css-declaration-sorter](https://www.npmjs.com/package/css-declaration-sorter)
+
+#### Prettier for formating
+
+Standardizing code formating is important when working with other developers, prettier takes care of this automatically.
+[https://prettier.io/docs/en/configuration.html](https://prettier.io/docs/en/configuration.html)
 
 ### Containerize
 
@@ -124,7 +130,7 @@ Button reset, sets desired accessibility options and states.
 
 ### Iconize
 
-Writes all the annoying icon loading css.
+Icon reset, set desired options for displaying an font icon.
 
 ```scss
 @include iconize($icon-family, $icon-uni, $side: 'before'): ;
@@ -179,7 +185,7 @@ Special case to add Vendor Prefixes for keyframes.
 
 ### Grid
 
-Unit multiplier. Base on an 8px grid system. This means the smallest increment between items is 8px (or 4px) and all spaces are divisible by 8px(or 4). This insures spacing is optimized to pixel based displays and all spacing is proportional to each other. Spacing is relative to the closet adjacent element.
+Unit multiplier. Base on an 8px grid system. This means the smallest increment between items is 8px (or 4px) and all spaces are divisible by 8px(or 4). This insures spacing is optimized to pixel based displays and all spacing is proportional to each other. Spacing is relative to the adjacent element.
 
 [https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632](https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632)
 
@@ -192,11 +198,11 @@ g(8)
 
 The prefered units for element sizing, vertical and horizontal spacing is percents and pixels.
 
-#### Suggested Use: Font-Sizing
+#### Suggested Use: Padding, Margin, Width, Height
 
 ### EM
 
-Function to Convert pixels to EMs, use this for media queries.
+Function to convert pixels to EMs, use this for Media Queries.
 
 #### Suggested Use: Media Queries
 
@@ -218,7 +224,7 @@ rem($pixels, $root_context: $base-font-size);
 
 ### Flexbox
 
-Use flexbox to organize inline media.
+Use Flexbox to organize inline media.
 
 ### CSS Grid
 
