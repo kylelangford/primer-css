@@ -105,6 +105,7 @@ Mobile first media queries
   max-height: 850px;
 }
 
+/* Output */
 @media only screen and (min-width: 1100px) {
   width: 100%;
   height: 100vh;
@@ -135,16 +136,18 @@ Icon reset, set desired options for displaying an font icon.
 ```scss
 @include iconize($icon-family, $icon-uni, $side: 'before'): ;
 
-speak: none;
-font-style: normal;
-font-weight: normal;
-font-variant: normal;
-text-transform: none;
-line-height: normal;
+span {
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: normal;
 
-/* Better Font Rendering =========== */
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 ```
 
 - `icon-family` Font-Family
@@ -153,13 +156,14 @@ line-height: normal;
 
 ### Prefix
 
-Mixin to Add Vendor Prefixes
+Use this to add vendor prefixes.
 
 ```scss
 a {
   @include prefix(transition, color 0.15s linear, webkit ms);
 }
 
+/* Output */
 a {
   -webkit-transition: color 0.15s linear;
   -ms-transition: color 0.15s linear;
@@ -185,13 +189,15 @@ Special case to add Vendor Prefixes for keyframes.
 
 ### Grid
 
-Unit multiplier. Base on an 8px grid system. This means the smallest increment between items is 8px (or 4px) and all spaces are divisible by 8px(or 4). This insures spacing is optimized to pixel based displays and all spacing is proportional to each other. Spacing is relative to the adjacent element.
+Functiont to standardize spacing. Based on an 8px grid system. This means the smallest increment between items is 8px (or 4px) and all spaces are divisible by 8px(or 4). This insures spacing is optimized to pixel based displays and all spacing is proportional to each other. Spacing is relative to the adjacent element.
 
 [https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632](https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632)
 
 ```css
-g(8)
+margin-bottom: g(8);
 
+/* Output */
+margin-bottom: 64px;
 ```
 
 #### Pixels for layout
