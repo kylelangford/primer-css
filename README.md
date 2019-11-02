@@ -18,12 +18,12 @@ Primer is simple mixin library for builing out larger more complex design system
 - em
 - grid
 - iconize
-- media-queries
+- media
 - prefix-keyframes
 - prefix
 - rem
 
-### Syntax Naming: BEM
+### Selector Naming: BEM
 
 Block Element Modifier
 [http://getbem.com/naming/](http://getbem.com/naming/)
