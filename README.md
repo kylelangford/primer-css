@@ -54,6 +54,14 @@ with .block--color-red. Spaces in complicated modifiers are replaced by dash.
 }
 ```
 
+Human readable standard. How it is spoken.
+
+menu\_\_primary
+
+menu\_\_secondary
+
+prefered -> primary-menu\_\_
+
 #### Declaration Sorting: SMACSS
 
 Scalable and Modular Architecture for CSS
@@ -134,10 +142,13 @@ Button reset, sets desired accessibility options and states.
 Icon reset, set desired options for displaying an font icon.
 
 ```scss
-@include iconize($icon-family, $icon-uni, $side: 'before'): ;
+span {
+  @include iconize($icon-family, $icon-uni, $side: 'before'): ;
+}
 
 span {
   speak: none;
+  font-family: $icon-family;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -147,6 +158,10 @@ span {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &:before {
+    content: '$icon-uni';
+  }
 }
 ```
 
@@ -235,3 +250,11 @@ Use Flexbox to organize inline media.
 ### CSS Grid
 
 Use CSS Grid to create layouts.
+
+### Layers
+
+Z-index management
+
+### Animation
+
+hardware acceleration

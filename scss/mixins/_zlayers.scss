@@ -1,0 +1,21 @@
+/*
+
+  z-index management
+
+	.site-header {
+	  z-index: layer('header');
+	  position: relative; 
+	}
+
+*/
+
+$z-indexes: ('top', 'modal', 'overlay', 'header', 'page', 'back');
+
+@function layer($name) {
+	@if index($z-indexes, $name) {
+		@return (length($z-indexes) - index($z-indexes, $name)) + 1 * 10;
+	} @else {
+		@warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
+		@return null;
+	}
+}

@@ -5,36 +5,22 @@
  * Copyright 2018 Kyle Langford */
 
 /* Vars */
-@import 'breakpoints';
-@import 'colors';
-@import 'variables';
+@import 'vars';
 
 /* Mixins */
 @import 'mixins/bem';
-@import 'mixins/clearfix';
 @import 'mixins/buttonize';
+@import 'mixins/clearfix';
 @import 'mixins/containerize';
-// @import 'mixins/panelize';
+@import 'mixins/em';
+@import 'mixins/fixed-ratio';
 @import 'mixins/grid';
+@import 'mixins/hardware';
 @import 'mixins/iconize';
 @import 'mixins/media-queries';
+@import 'mixins/panelize';
 @import 'mixins/prefix';
 @import 'mixins/prefix-keyframes';
-@import 'mixins/em';
 @import 'mixins/rem';
+@import 'mixins/zlayers';
 @import 'mixins/zebra';
-
-/* Document */
-@import 'document/grid';
-@import 'document/layout';
-@import 'document/elements';
-@import 'document/spacing';
-@import 'document/visibility';
-
-/* Animation */
-@import 'animations/animate';
-@import 'animations/fade-in';
-@import 'animations/bounce';
-@import 'animations/hint';
-
-/* Custom Styling */

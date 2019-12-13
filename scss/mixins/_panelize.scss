@@ -1,17 +1,14 @@
 /*
- * Panel
+  Panel
+
+	Container with a fixed height, kind of like a slide
+
 */
 
-// Panel
-//
-// Container with a fixed height
-//
-// Markup: panelize/panelize.twig
-//
-// Style guide: Mixins.panelize
+$max-height: 850px !default;
 
 @mixin panelize($local-max-height: $max-height) {
-  min-height: $local-max-height;
-  position: relative;
-  width: 100%;
+	width: 100%;
+	height: 100vh;
+	max-height: $local-max-height;
 }
