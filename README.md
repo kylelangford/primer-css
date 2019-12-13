@@ -1,6 +1,6 @@
 # Primer CSS (alpha)
 
-Primer is a collection of mixins for building out larger more complex css systems. I do not claim authorship, I have merely found these personally for my process.
+Primer is a collection of mixins for building out larger more complex css systems. Most of these I have found in the wild.
 
 ## Methodology
 
