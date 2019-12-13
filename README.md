@@ -49,6 +49,7 @@ with .block--color-red. Spaces in complicated modifiers are replaced by dash.
   }
 }
 
+/* Output */
 .button {
   .button__primary {
     background-color: blue;
@@ -87,6 +88,12 @@ Standardizing code formating is important when working with other developers, pr
 A container is an element with a max-width and equal left / right margins. This can be used to set the primary column and page gutters. Containers can be used to organize rows.
 
 ```scss
+.container {
+  @include containerize;
+  padding: $gutter 0;
+}
+
+/* Output */
 .container {
   @include containerize;
   padding: $gutter 0;
@@ -171,19 +178,17 @@ span {
 
 Container with a fixed height, kind of like a slide.
 
-```
-
+```scss
 .overlay__menu {
   @include panelize($max-height);
 }
 
-// Output
+/* Output */
 .overlay__menu {
   width: 100%;
   height: 100vh;
   max-height: 850px;
 }
-
 ```
 
 ### Prefix
@@ -225,7 +230,7 @@ Functiont to standardize spacing. Based on an 8px grid system. This means the sm
 
 [https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632](https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632)
 
-```css
+```scss
 margin-bottom: g(8);
 
 /* Output */
@@ -274,7 +279,7 @@ Z-index management
 
 Organize your elements z-index into layers.
 
-```
+```scss
 $z-indexes: ('top', 'modal', 'overlay', 'header', 'page', 'back');
 
 .site-header {
@@ -282,27 +287,25 @@ $z-indexes: ('top', 'modal', 'overlay', 'header', 'page', 'back');
   position: relative;
 }
 
-// Output
+/* Output */
 .site-header {
   z-index: 3; // Header
   position: relative;
 }
-
 ```
 
 ### Hardware Acceleration
 
 Simple and effective for when you need to trigger hardware acceleration for some animation, keeping everything fast, slick and flicker-free.
 
-```
+```scss
 .fade-in {
   @include hardware('true');
 }
 
-// Output
+/* Output */
 .fade-in {
   backface-visibility: hidden;
   perspective: 1000;
 }
-
 ```
