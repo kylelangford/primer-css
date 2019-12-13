@@ -89,13 +89,16 @@ A container is an element with a max-width and equal left / right margins. This 
 
 ```scss
 .container {
-  @include containerize;
+  @include containerize($max-width);
   padding: $gutter 0;
 }
 
 /* Output */
 .container {
-  @include containerize;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
   padding: $gutter 0;
 }
 ```
@@ -107,7 +110,7 @@ A container is an element with a max-width and equal left / right margins. This 
 </div>
 ```
 
-### Media
+### Media Queries
 
 Mobile first media queries
 
