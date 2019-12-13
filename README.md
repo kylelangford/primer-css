@@ -255,6 +255,11 @@ Function to convert pixels to EMs, use this for Media Queries.
 ```scss
 em($pixels, $context: $base-font-size);
 
+$breakpoint: em(640px)
+
+/* Output */
+$breakpoint: 40em;
+
 ```
 
 ### REM
@@ -265,16 +270,20 @@ Function to convert pixels to REMs, use this for font sizing.
 
 ```scss
 rem($pixels, $root_context: $base-font-size);
+font-size: rem(32px);
+
+/* Output */
+font-size: 2rem;
 
 ```
 
 ### Flexbox
 
-Use Flexbox to organize inline media.
+Use Flexbox to organize inline media. Coming Soon.
 
 ### CSS Grid
 
-Use CSS Grid to create layouts.
+Use CSS Grid to create layouts. Coming Soon.
 
 ### Layers
 
