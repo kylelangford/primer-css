@@ -1,6 +1,6 @@
-# Primer (alpha)
+# Primer CSS (alpha)
 
-Primer is simple mixin library for builing out larger more complex design systems.
+Primer is a collection of mixins for building out larger more complex css systems. I do not claim authorship, I have merely found these personally for my process.
 
 ## Methodology
 
@@ -14,14 +14,20 @@ Primer is simple mixin library for builing out larger more complex design system
 
 - bem
 - buttonzine
+- clearfix
 - containerize
 - em
+- fixed ratio
 - grid
+- hardware
 - iconize
-- media
+- layers
+- media-queries
+- panelize
 - prefix-keyframes
 - prefix
 - rem
+- zebra
 
 ### Selector Naming: BEM
 
@@ -53,14 +59,6 @@ with .block--color-red. Spaces in complicated modifiers are replaced by dash.
   }
 }
 ```
-
-Human readable standard. How it is spoken.
-
-menu\_\_primary
-
-menu\_\_secondary
-
-prefered -> primary-menu\_\_
 
 #### Declaration Sorting: SMACSS
 
@@ -169,6 +167,25 @@ span {
 - `icon-uni` Unicode Value
 - `side` Before or after
 
+### Panelize
+
+Container with a fixed height, kind of like a slide.
+
+```
+
+.overlay__menu {
+  @include panelize($max-height);
+}
+
+// Output
+.overlay__menu {
+  width: 100%;
+  height: 100vh;
+  max-height: 850px;
+}
+
+```
+
 ### Prefix
 
 Use this to add vendor prefixes.
@@ -255,6 +272,37 @@ Use CSS Grid to create layouts.
 
 Z-index management
 
-### Animation
+Organize your elements z-index into layers.
 
-hardware acceleration
+```
+$z-indexes: ('top', 'modal', 'overlay', 'header', 'page', 'back');
+
+.site-header {
+  z-index: layer('header');
+  position: relative;
+}
+
+// Output
+.site-header {
+  z-index: 3; // Header
+  position: relative;
+}
+
+```
+
+### Hardware Acceleration
+
+Simple and effective for when you need to trigger hardware acceleration for some animation, keeping everything fast, slick and flicker-free.
+
+```
+.fade-in {
+  @include hardware('true');
+}
+
+// Output
+.fade-in {
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+```

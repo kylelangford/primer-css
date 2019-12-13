@@ -6,7 +6,7 @@
 $stripe-even-color: white !default;
 $stripe-odd-color: #f4f4f4 !default;
 
-@mixin stripe($color1: $stripe-even-color, $color2: $stripe-odd-color) {
+@mixin zebra($color1: $stripe-even-color, $color2: $stripe-odd-color) {
 	background-color: $color1;
 
 	&:nth-of-type(odd) {
