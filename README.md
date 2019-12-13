@@ -234,10 +234,14 @@ Functiont to standardize spacing. Based on an 8px grid system. This means the sm
 [https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632](https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632)
 
 ```scss
-margin-bottom: g(8);
+.card {
+  margin-bottom: g(8);
+}
 
 /* Output */
-margin-bottom: 64px;
+.card {
+  margin-bottom: 64px;
+}
 ```
 
 #### Pixels for layout
@@ -270,10 +274,16 @@ Function to convert pixels to REMs, use this for font sizing.
 
 ```scss
 rem($pixels, $root_context: $base-font-size);
-font-size: rem(32px);
+
+.text--large {
+  font-size: rem(32px);
+}
+
 
 /* Output */
-font-size: 2rem;
+.text--large {
+  font-size: 2rem;
+}
 
 ```
 
